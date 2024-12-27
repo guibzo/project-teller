@@ -46,6 +46,23 @@ const config: Config = {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
+        app: {
+          bg: {
+            primary: "var(--app-bg-primary)",
+            secondary: "var(--app-bg-secondary)",
+            tertiary: "var(--app-bg-tertiary)",
+          },
+          content: {
+            body: "var(--app-content-body)",
+            placeholder: "var(--app-content-placeholder)",
+            headline: "var(--app-content-headline)",
+          },
+          border: {
+            primary: "var(--app-border-primary)",
+            secondary: "var(--app-border-secondary)",
+            tertiary: "var(--app-border-tertiary)",
+          },
+        }
       },
       borderRadius: {
         lg: "var(--radius)",
