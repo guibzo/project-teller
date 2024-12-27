@@ -8,7 +8,6 @@ type CustomInputProps = {
   endIcon?: React.ReactNode
   revealer?: boolean
   containerClassName?: string
-  inputClassName?: string
 }
 
 const Input = React.forwardRef<
@@ -23,7 +22,6 @@ const Input = React.forwardRef<
       endIcon,
       revealer,
       containerClassName,
-      inputClassName,
       ...props
     },
     ref,
@@ -33,14 +31,14 @@ const Input = React.forwardRef<
     const inputType = revealer ? (showInput ? 'text' : 'password') : type
 
     return (
-      <div className='relative'>
+      <div className={cn('relative', containerClassName)}>
         <input
           type={inputType}
           className={cn(
             'peer flex h-10 w-full rounded-md border border-input bg-background px-2.5 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm',
-            className,
             startIcon && 'ps-9',
             (endIcon || revealer) && 'pe-9',
+            className,
           )}
           ref={ref}
           {...props}
