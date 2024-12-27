@@ -2,7 +2,7 @@ import { Providers } from '@/components/providers'
 import { cn } from '@/lib/cn'
 import '@/styles/global.css'
 import type { Metadata } from 'next'
-import { Red_Hat_Display } from 'next/font/google'
+import { Kanit, Red_Hat_Display } from 'next/font/google'
 
 export const metadata: Metadata = {
   title: {
@@ -16,14 +16,19 @@ const redHatDisplay = Red_Hat_Display({
   weight: ['400', '500', '700'],
 })
 
+const kanit = Kanit({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang='pt-BR'>
-      <body className={cn('antialiased', redHatDisplay.className)}>
+    <html lang='pt-BR' className={cn(redHatDisplay.className, kanit.className)}>
+      <body className={cn('font-red-hat-display antialiased')}>
         <Providers>{children}</Providers>
       </body>
     </html>
