@@ -8,6 +8,7 @@ import { GridSmallBg } from '@/components/ui/grid-small-bg'
 import { Separator } from '@/components/ui/separator'
 import { socialLogos } from '@/constants/social-logos'
 import { LucideUser } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { CreateInput } from './components/create-input'
 
@@ -19,7 +20,7 @@ export const Hero = () => {
           <Header />
 
           <div className='-mt-10 flex flex-1 items-center'>
-            <section className='my-auto grid grid-cols-5 gap-20'>
+            <section className='my-auto grid grid-cols-5 items-center gap-20'>
               <div className='col-span-3'>
                 <div className='space-y-2.5'>
                   <h1 className='text-5xl font-bold leading-[56px] text-white'>
@@ -39,21 +40,21 @@ export const Hero = () => {
               <div className='relative col-span-2 ml-auto'>
                 <div className='absolute -z-10 h-full w-full rounded-full bg-primary blur-3xl' />
 
-                <div className='flex w-1/2 rounded-b-none rounded-t-md bg-card px-3 py-1'>
+                <div className='flex w-1/2 rounded-b-none rounded-t-md border border-b-0 bg-card px-3 py-1'>
                   <div className='flex w-full items-center'>
                     <span className='flex size-2.5 items-center'>
                       <span className='absolute inline-flex size-2.5 animate-ping rounded-full bg-green-200 opacity-75' />
-                      <span className='inline-flex size-2.5 rounded-full bg-emerald-400' />
+                      <span className='inline-flex size-2.5 rounded-full bg-sky-400' />
                     </span>
 
-                    <h4 className='ml-2 font-kanit text-sm font-medium text-emerald-500'>
-                      15 CLIQUES
+                    <h4 className='ml-2 font-kanit text-sm font-medium text-sky-500'>
+                      15 <span className='text-xs'>CLIQUES</span>
                     </h4>
                   </div>
                 </div>
 
                 <Card className='w-[360px] rounded-tl-none border-none'>
-                  <CardContent className='rounded-2xl border'>
+                  <CardContent className='rounded-2xl rounded-tl-none border'>
                     <Avatar className='mx-auto size-[200px]'>
                       <AvatarImage src='https://github.com/guibzo.png' />
                       <AvatarFallback>
@@ -70,7 +71,7 @@ export const Hero = () => {
 
                     <Separator className='mb-4 mt-2 w-4/5' />
 
-                    <h6 className='text-sm font-semibold'>LINKS</h6>
+                    <h6 className='text-xs font-semibold'>SOCIALS</h6>
                     <ul className='mt-2 flex items-center gap-2.5'>
                       {socialLogos.map((logo) => {
                         const Icon = logo.src
@@ -81,12 +82,21 @@ export const Hero = () => {
                               <Button
                                 variant='ghost'
                                 size='icon'
-                                className='bg-zinc-600 hover:bg-zinc-700'
+                                className='bg-secondary brightness-110 hover:bg-secondary/50'
                               >
-                                <Icon
-                                  size={24}
-                                  className='shrink-0 text-white'
-                                />
+                                {typeof Icon === 'string' ? (
+                                  <Image
+                                    src={Icon}
+                                    alt={logo.name}
+                                    width={26}
+                                    height={26}
+                                  />
+                                ) : (
+                                  <Icon
+                                    size={26}
+                                    className='shrink-0 text-white'
+                                  />
+                                )}
                               </Button>
                             </Link>
                           </li>
