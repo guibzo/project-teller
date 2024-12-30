@@ -39,9 +39,14 @@ export const Hero = () => {
               <div className='relative col-span-2 ml-auto'>
                 <div className='absolute -z-10 h-full w-full rounded-full bg-primary blur-3xl' />
 
-                <div className='flex w-1/2 rounded-b-none rounded-t-md bg-secondary px-3 py-1'>
+                <div className='flex w-1/2 rounded-b-none rounded-t-md bg-card px-3 py-1'>
                   <div className='flex w-full items-center'>
-                    <h4 className='font-kanit text-sm font-medium text-emerald-500'>
+                    <span className='flex size-2.5 items-center'>
+                      <span className='absolute inline-flex size-2.5 animate-ping rounded-full bg-green-200 opacity-75' />
+                      <span className='inline-flex size-2.5 rounded-full bg-emerald-400' />
+                    </span>
+
+                    <h4 className='ml-2 font-kanit text-sm font-medium text-emerald-500'>
                       15 CLIQUES
                     </h4>
                   </div>

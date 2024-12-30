@@ -1,16 +1,22 @@
 import { ContentContainer } from '@/components/content-container'
 import type { Metadata } from 'next'
 import { Hero } from './(hero)'
+import { Pricing } from './(pricing)'
+import { VideoExplanation } from './(video-explanation)'
 
 export const metadata: Metadata = {
-  title: 'Home | ProjectTeller',
+  title: 'ProjectTeller',
 }
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <ContentContainer>hello world</ContentContainer>
+
+      <ContentContainer>
+        <VideoExplanation />
+        <Pricing />
+      </ContentContainer>
     </>
   )
 }

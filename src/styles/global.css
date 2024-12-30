@@ -30,13 +30,13 @@
   :root {
     --background: 217 12% 10%;
     --foreground: 217 5% 90%;
-    --card: 217 12% 10%;
+    --card: 217 12% 15%;
     --card-foreground: 217 5% 90%;
     --popover: 217 12% 5%;
     --popover-foreground: 217 5% 90%;
     --primary: 217 73% 62%;
     --primary-foreground: 255 200% 255%;
-    --secondary: 217 12% 20%;
+    --secondary: 217 25% 30%;
     --secondary-foreground: 0 0% 100%;
     --muted: 179 12% 21%;
     --muted-foreground: 217 5% 60%;
