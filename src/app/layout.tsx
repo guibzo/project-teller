@@ -6,8 +6,8 @@ import { Kanit, Red_Hat_Display } from 'next/font/google'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | ProjectTeller',
-    default: 'ProjectTeller',
+    template: '%s | Project Teller',
+    default: 'Project Teller',
   },
 }
 

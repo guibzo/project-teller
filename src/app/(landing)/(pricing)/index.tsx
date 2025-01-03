@@ -6,7 +6,6 @@ import { PricingCard } from './(components)/pricing-card'
 
 export const Pricing = () => {
   return (
-    // mb-[150px] mt-[70px]
     <section className='flex flex-col items-center gap-14'>
       <div className='items-center space-y-6'>
         <LandingSectionTitle>Um valor acessível para todos</LandingSectionTitle>
@@ -21,13 +20,13 @@ export const Pricing = () => {
       <div className='grid grid-cols-3 gap-9'>
         {plans.map((plan) => {
           return (
-            <>
+            <div key={plan.id}>
               {plan.isHighlighted ? (
-                <HighlightedPricingCard key={plan.id} {...plan} />
+                <HighlightedPricingCard {...plan} />
               ) : (
-                <PricingCard key={plan.id} {...plan} />
+                <PricingCard {...plan} />
               )}
-            </>
+            </div>
           )
         })}
       </div>
