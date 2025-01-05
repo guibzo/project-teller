@@ -22,7 +22,7 @@ export default async function Page({
           <Header />
         </ContentContainer>
 
-        <ContentContainer className='relative mt-20 overflow-y-hidden'>
+        <ContentContainer className='relative mt-14 overflow-y-hidden'>
           <div className='relative flex gap-[120px]'>
             <div className='mt-16'>
               <UserCard />

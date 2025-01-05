@@ -1,7 +1,7 @@
 import { ContentContainer } from '@/components/content-container'
 import { Header } from '@/components/header'
 import { LucideSparkles } from 'lucide-react'
-import { CreateInput } from './(components)/create-input'
+import { CreateProfileForm } from './(components)/create-profile-form'
 
 export default function Page() {
   return (
@@ -19,7 +19,7 @@ export default function Page() {
           </div>
         </div>
 
-        <CreateInput />
+        <CreateProfileForm />
       </div>
     </ContentContainer>
   )

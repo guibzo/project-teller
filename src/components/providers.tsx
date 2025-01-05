@@ -1,5 +1,6 @@
 'use client'
 
+import { Toaster } from '@/components/ui/sonner'
 import { DialogsList } from './dialogs-list'
 
 export const Providers = (props: React.PropsWithChildren) => {
@@ -8,6 +9,7 @@ export const Providers = (props: React.PropsWithChildren) => {
       {props.children}
 
       <DialogsList />
+      <Toaster />
     </>
   )
 }
